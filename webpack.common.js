@@ -4,7 +4,6 @@ const ImageminMozjpeg = require('imagemin-mozjpeg');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 
 module.exports = {
@@ -35,7 +34,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
     new WorkboxWebpackPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, 'src/scripts/service-worker.js'),
     }),
